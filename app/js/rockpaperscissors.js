@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////
 /*   Provided Code - Please Don't Edit   */
 ////////////////////////////////////////////////
-'use strict';
+//'use strict';
 
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
@@ -48,11 +48,11 @@ function getWinner(playerMove,computerMove) {
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
     
-    if (! ((playerMove === 'rock') || (playerMove === 'scissors') || (playerMove === 'paper'))) 
+    /*if (! ((playerMove === 'rock') || (playerMove === 'scissors') || (playerMove === 'paper'))) 
     {
      console.log( "Improper Format: use 'rock', 'paper', or 'scissors' only")
     } 
-    else if (computerMove === playerMove) {
+    else */ if (computerMove === playerMove) {
         winner= 'tie!';
     }
     else if ( (computerMove === 'rock') && (playerMove === 'scissors')) {
@@ -77,6 +77,15 @@ function playToFive() {
     var computerWins = 0;
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
     /* YOUR CODE HERE */
-    return [playerWins, computerWins];
+     while (playerWins < 5 || computerWins <5){
+
+    if (getWinner() === 'computer') {
+        computerWins +=1;
+    } else if  (getWinner () === 'player') {
+        playerWins += 1;
+    } 
+}
+    return console.log ( 'human played ' + getPlayerMove(), 'computer played ' + getComputerMove() + '.' + 'Winner: ' +getWinner() + 
+        [playerWins, computerWins]);
 }
 
