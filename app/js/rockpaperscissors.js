@@ -7,6 +7,8 @@ var playerWins = 0;
 var computerWins = 0;
 var storePlayerMove;
 var storeComputerMove;
+var rightFormat= ['rock', 'paper', 'scissors'];
+
 
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.");
@@ -55,7 +57,11 @@ function getWinner(playerMove,computerMove) {
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
     
-    if (computerMove == playerMove) {
+    if (-1 = rightFormat.indexOf(playerMove)) {
+        console.log("Human! Learn to read!" + '\n' + " You didn't use the right format. Use lower case letters ONLY" + '\n' +"This is declared a tie dispite your inferior brain!");
+        winner= 'tie';
+
+    }else if (computerMove == playerMove) {
         winner= 'tie';
     }
     else if ( (computerMove == 'rock') && (playerMove == 'scissors')) {
